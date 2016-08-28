@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:8000',
+    'webpack-dev-server/client?http://0.0.0.0:8000',
     'webpack/hot/only-dev-server',
     './src/index'
   ],
@@ -12,6 +12,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/static/'
+  },
+  watchOptions: {
+    poll: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
