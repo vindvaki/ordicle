@@ -6,7 +6,7 @@ import { createStore } from 'redux'
 import words from './reducers/words'
 
 import App from './App';
-import ArticleContainer from './containers/ArticleContainer';
+import Main from './components/Main';
 
 let store = createStore(words)
 
@@ -14,7 +14,7 @@ ReactDOM.render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App} >
-        <Route path="/articles" component={ArticleContainer} />
+        <Route path="/home" component={Main} />
       </Route>
     </Router>
   </Provider>

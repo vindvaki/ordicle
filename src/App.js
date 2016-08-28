@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 function App(props) {
   return (
     <div>
-      <h1>App</h1>
+      <h1>Ordicle</h1>
       {props.children}
     </div>
   );
