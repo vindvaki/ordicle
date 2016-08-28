@@ -1,9 +1,16 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class App extends Component {
-  render() {
-    return (
-      <h1>Hello, world.</h1>
-    );
-  }
+function App(props) {
+  return (
+    <div>
+      <h1>App</h1>
+      {props.children}
+    </div>
+  );
 }
+
+App.propTypes = {
+  children: PropTypes.node,
+};
+
+export default App;
