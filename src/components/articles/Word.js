@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Word = ({ word }) => (
-  <span>{word}</span>
+const Word = ({ word, onClick }) => (
+  <span onClick={onClick}>{word}</span>
 );
 
 export default Word;
