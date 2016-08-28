@@ -5,6 +5,7 @@ web:
   volumes:
     # map current directory to /usr/src/app
     - .:/usr/src/app:rw
+    - /usr/src/app/node_modules
   environment:
     - NODE_ENV=dev
   command: npm start
