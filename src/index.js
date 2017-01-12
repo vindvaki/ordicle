@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import words from './reducers/words'
@@ -14,7 +14,7 @@ ReactDOM.render((
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App} >
-        <Route path="/home" component={Main} />
+        <IndexRoute component={Main} />
       </Route>
     </Router>
   </Provider>
