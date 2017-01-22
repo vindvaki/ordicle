@@ -3,8 +3,7 @@ web:
   ports:
     - "8000:8000"
   volumes:
-    # map current directory to /usr/src/app
-    - .:/usr/src/app:rw
+    - web:/usr/src/app:rw
   environment:
     - NODE_ENV=dev
-  command: npm start
+  command: yarn run start
